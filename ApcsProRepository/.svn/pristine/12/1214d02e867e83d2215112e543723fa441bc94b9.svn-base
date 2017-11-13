@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration>
+  <configSections>
+    <sectionGroup name="userSettings" type="System.Configuration.UserSettingsGroup, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+      <section name="SelfCon.My.MySettings" type="System.Configuration.ClientSettingsSection, System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" allowExeDefinition="MachineToLocalUser" requirePermission="false" />
+    </sectionGroup>
+  </configSections>
+  <connectionStrings>
+    <add name="SelfCon.My.MySettings.DBxConnectionString" connectionString="Data Source=172.16.0.102;Initial Catalog=DBx;Persist Security Info=True;User ID=dbxuser"
+      providerName="System.Data.SqlClient" />
+    <add name="SelfCon.My.MySettings.DBLSISHTConnectionString" connectionString="Data Source=10.28.1.144;Initial Catalog=DBLSISHT;Persist Security Info=True;User ID=ship;Password=ship"
+      providerName="System.Data.SqlClient" />
+    <add name="SelfCon.My.MySettings.BomConnectionString" connectionString="Data Source=172.16.0.102;Initial Catalog=DBx;Persist Security Info=True;User ID=bomuser;Password=bomu$er"
+      providerName="System.Data.SqlClient" />
+    <add name="SelfCon.My.MySettings.TDCConnectionString" connectionString="Data Source=172.16.0.102;Initial Catalog=APCSDB;Persist Security Info=True;User ID=apcsdbuser"
+      providerName="System.Data.SqlClient" />
+  </connectionStrings>
+  <system.diagnostics>
+    <sources>
+      <!-- This section defines the logging configuration for My.Application.Log -->
+      <source name="DefaultSource" switchName="DefaultSwitch">
+        <listeners>
+          <add name="FileLog" />
+          <!-- Uncomment the below section to write to the Application Event Log -->
+          <!--<add name="EventLog"/>-->
+        </listeners>
+      </source>
+    </sources>
+    <switches>
+      <add name="DefaultSwitch" value="Information" />
+    </switches>
+    <sharedListeners>
+      <add name="FileLog" type="Microsoft.VisualBasic.Logging.FileLogTraceListener, Microsoft.VisualBasic, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" initializeData="FileLogWriter" />
+      <!-- Uncomment the below section and replace APPLICATION_NAME with the name of your application to write to the Application Event Log -->
+      <!--<add name="EventLog" type="System.Diagnostics.EventLogTraceListener" initializeData="APPLICATION_NAME"/> -->
+    </sharedListeners>
+  </system.diagnostics>
+  <userSettings>
+    <SelfCon.My.MySettings>
+      <setting name="EmsServiceUrl" serializeAs="String">
+        <value>http://webserv.thematrix.net:7777/EmsService</value>
+      </setting>
+      <setting name="ProcessName" serializeAs="String">
+        <value>FT</value>
+      </setting>
+      <setting name="LineNo" serializeAs="String">
+        <value>99</value>
+      </setting>
+      <setting name="BMRequestUrl" serializeAs="String">
+        <value>http://webserv.thematrix.net/LsiPETE/LSI_Prog/Maintenance/MainloginPD.asp</value>
+      </setting>
+      <setting name="PMRequestUrl" serializeAs="String">
+        <value>http://webserv.thematrix.net/LsiPETE/LSI_Prog/Maintenance/MainPMlogin.asp</value>
+      </setting>
+      <setting name="AndonRequestUrl" serializeAs="String">
+        <value>http://webserv.thematrix.net/andon</value>
+      </setting>
+      <setting name="InternetExplorerProgramFileName" serializeAs="String">
+        <value>C:\Program Files\Internet Explorer\iexplore.exe</value>
+      </setting>
+      <setting name="SaveStateInterval" serializeAs="String">
+        <value>600000</value>
+      </setting>
+      <setting name="ClearLogIntervalDays" serializeAs="String">
+        <value>7</value>
+      </setting>
+      <setting name="ClearLogTimeStamp" serializeAs="String">
+        <value>2013-11-13</value>
+      </setting>
+      <setting name="GroupLeaderGroupName" serializeAs="String">
+        <value>FT-GL</value>
+      </setting>
+      <setting name="AutomotiveGroupName" serializeAs="String">
+        <value>AUTOMOTIVE</value>
+      </setting>
+      <setting name="SetupGroupName" serializeAs="String">
+        <value>FT-SETUP</value>
+      </setting>
+      <setting name="TdcEnabled" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="EmsEnabled" serializeAs="String">
+        <value>True</value>
+      </setting>
+      <setting name="BomWebsiteUrl" serializeAs="String">
+        <value>http://webserv.thematrix.net/bom/Default.aspx</value>
+      </setting>
+      <setting name="ShowFTPanelGrid" serializeAs="String">
+        <value>False</value>
+      </setting>
+      <setting name="FTProcessID" serializeAs="String">
+        <value>9</value>
+      </setting>
+      <setting name="EcoWatchDuration" serializeAs="String">
+        <value>06:00:00</value>
+      </setting>
+      <setting name="FTOPGroupName" serializeAs="String">
+        <value>FT-OP</value>
+      </setting>
+      <setting name="LogDirectory" serializeAs="String">
+        <value>Log</value>
+      </setting>
+      <setting name="DataErrorDirectory" serializeAs="String">
+        <value>DataError</value>
+      </setting>
+      <setting name="StateDirectory" serializeAs="String">
+        <value>State</value>
+      </setting>
+    </SelfCon.My.MySettings>
+  </userSettings>
+  <system.serviceModel>
+    <bindings>
+      <basicHttpBinding>
+        <binding name="ApcsWebServiceSoap" closeTimeout="00:01:00" openTimeout="00:01:00"
+          receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false"
+          bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard"
+          maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536"
+          messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered"
+          useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+            maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None"
+              realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+        <binding name="SettingServiceSoap" closeTimeout="00:01:00" openTimeout="00:01:00"
+          receiveTimeout="00:10:00" sendTimeout="00:01:00" allowCookies="false"
+          bypassProxyOnLocal="false" hostNameComparisonMode="StrongWildcard"
+          maxBufferSize="65536" maxBufferPoolSize="524288" maxReceivedMessageSize="65536"
+          messageEncoding="Text" textEncoding="utf-8" transferMode="Buffered"
+          useDefaultWebProxy="true">
+          <readerQuotas maxDepth="32" maxStringContentLength="8192" maxArrayLength="16384"
+            maxBytesPerRead="4096" maxNameTableCharCount="16384" />
+          <security mode="None">
+            <transport clientCredentialType="None" proxyCredentialType="None"
+              realm="" />
+            <message clientCredentialType="UserName" algorithmSuite="Default" />
+          </security>
+        </binding>
+      </basicHttpBinding>
+    </bindings>
+    <client>
+      <endpoint address="http://webserv.thematrix.net/apcscontrolsystem/apcswebservice.asmx"
+        binding="basicHttpBinding" bindingConfiguration="ApcsWebServiceSoap"
+        contract="Rohm.ApcsWeb.ApcsWebServiceSoap" name="ApcsWebServiceSoap" />
+      <endpoint address="http://localhost:63164/SettingService.asmx"
+        binding="basicHttpBinding" bindingConfiguration="SettingServiceSoap"
+        contract="Rohm.FT.SettingService.SettingServiceSoap" name="SettingServiceSoap" />
+    </client>
+  </system.serviceModel>
+</configuration>
