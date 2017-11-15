@@ -1722,7 +1722,7 @@
             // pictureBoxFinalOk
             // 
             this.pictureBoxFinalOk.Image = global::Rohm.Common.Forms.Properties.Resources.ButtonOkEnable;
-            this.pictureBoxFinalOk.Location = new System.Drawing.Point(451, 585);
+            this.pictureBoxFinalOk.Location = new System.Drawing.Point(5, 589);
             this.pictureBoxFinalOk.Name = "pictureBoxFinalOk";
             this.pictureBoxFinalOk.Size = new System.Drawing.Size(157, 60);
             this.pictureBoxFinalOk.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
