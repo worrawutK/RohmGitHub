@@ -1139,7 +1139,7 @@
             // pictureBoxInspctionOK
             // 
             this.pictureBoxInspctionOK.Image = global::Rohm.Common.Forms.Properties.Resources.ButtonOkEnable;
-            this.pictureBoxInspctionOK.Location = new System.Drawing.Point(459, 579);
+            this.pictureBoxInspctionOK.Location = new System.Drawing.Point(10, 580);
             this.pictureBoxInspctionOK.Name = "pictureBoxInspctionOK";
             this.pictureBoxInspctionOK.Size = new System.Drawing.Size(157, 60);
             this.pictureBoxInspctionOK.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
